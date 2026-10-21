@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="DaDa — a finished couples app for iOS and Android, ready to launch under your brand.">
+<meta property="og:title" content="DaDa — a finished app for couples">
+<meta property="og:description" content="Chat, plans, memories and a shared pet. Acquisition, licence or white label.">
+<meta property="og:image" content="https://adilxa.github.io/dada-preview/img/home.jpg">
+<title>DaDa — Proposal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800;900&family=Rubik:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+img { max-width: 100%; }
+/* Layout: the app's own riso-cartoon world — colour bands like its tab scenes, phone screenshots set on print-shadow cards. Single deliberate palette (the brand), both host themes get the same look. */
+:root {
+  --violet: #8584bd;
+  --violet-deep: #61609a;
+  --yellow: #f4ed36;
+  --butter: #f9cc73;
+  --pink: #f8c1ba;
+  --matcha: #b5c995;
+  --magenta: #ac4f98;
+  --red: #c94245;
+  --bone: #f9f5f2;
+  --ink: #1a1a1a;
+  --display: "Unbounded", "Arial Black", system-ui, sans-serif;
+  --body: "Rubik", "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --shadow: 6px 6px 0 var(--ink);
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--violet); color: var(--ink); font: 400 17px/1.55 var(--body); }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+section { padding-block: 64px; }
+h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: balance; line-height: 1.02; }
+h2 { font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 900; text-transform: uppercase; letter-spacing: -0.01em; }
+p { margin: 0; }
+.label { font: 700 12px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; }
+.pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border: 2px solid var(--ink); border-radius: 100px; background: var(--bone); font: 700 12px/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--red); }
+
+/* Hero */
+.hero { padding-block: 48px 72px; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap: 48px; align-items: center; }
+.logo { font: 900 2rem/1 var(--display); color: var(--yellow); letter-spacing: 0.02em; }
+.hero h1 { margin-top: 28px; font-size: clamp(2.8rem, 8vw, 5.6rem); font-weight: 900; text-transform: uppercase; color: var(--yellow); }
+.hero h1 span { display: block; color: var(--butter); }
+.lede { margin-top: 24px; max-width: 34ch; font-size: 1.25rem; color: var(--bone); }
+.hero-meta { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px; }
+.phone { width: 100%; max-width: 300px; border: 3px solid var(--ink); border-radius: 34px; overflow: hidden; box-shadow: var(--shadow); background: var(--ink); }
+.phone img { display: block; width: 100%; height: auto; }
+.hero .phone { justify-self: center; transform: rotate(2deg); }
+
+/* Ticker */
+.ticker { background: var(--yellow); border-block: 3px solid var(--ink); transform: rotate(-1.2deg); margin: 0 -20px; overflow: hidden; white-space: nowrap; }
+.ticker p { display: inline-block; padding: 14px 0; font: 900 1.2rem/1 var(--display); text-transform: uppercase; animation: slide 30s linear infinite; }
+@keyframes slide { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .ticker p { animation: none; } }
+
+/* Screens */
+.screens { background: var(--butter); }
+.screens h2 { color: var(--red); }
+.screens .intro { margin-top: 16px; max-width: 60ch; }
+.rail { margin-top: 40px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px; }
+.shot { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.shot .phone { max-width: none; border-radius: 26px; }
+.shot h3 { font-size: 1rem; font-weight: 800; text-transform: uppercase; }
+.shot p { font-size: 0.95rem; }
+
+/* Built */
+.built { background: var(--bone); }
+.built h2 { color: var(--magenta); }
+.features { margin-top: 40px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.feature { padding: 22px; border: 2px solid var(--ink); border-radius: 6px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.feature h3 { font-size: 1.15rem; font-weight: 800; text-transform: uppercase; }
+.feature ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; font-size: 0.97rem; }
+.f-chat { background: var(--pink); } .f-plans { background: var(--matcha); } .f-pet { background: var(--butter); }
+.f-mem { background: var(--yellow); } .f-cycle { background: var(--pink); } .f-plat { background: var(--violet); color: var(--bone); }
+
+/* Status */
+.status { background: var(--violet-deep); color: var(--bone); }
+.status h2 { color: var(--yellow); }
+.status-grid { margin-top: 32px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: start; }
+.status-grid p + p { margin-top: 14px; }
+.status strong { color: var(--yellow); font-weight: 700; }
+.steps { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; counter-reset: step; }
+.steps li { counter-increment: step; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; align-items: start; padding: 16px; background: var(--bone); color: var(--ink); border: 2px solid var(--ink); border-radius: 6px; box-shadow: 4px 4px 0 var(--ink); }
+.steps li::before { content: counter(step); width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--ink); background: var(--yellow); display: grid; place-items: center; font: 900 1.1rem/1 var(--display); }
+.steps b { display: block; font-family: var(--display); font-weight: 800; font-size: 0.95rem; text-transform: uppercase; }
+
+/* Deals */
+.deals { background: var(--matcha); }
+.deals h2 { color: #2f3f1f; }
+.deal-grid { margin-top: 36px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.deal { background: var(--bone); border: 2px solid var(--ink); border-radius: 6px; box-shadow: var(--shadow); padding: 24px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.deal h3 { font-size: 1.2rem; font-weight: 800; text-transform: uppercase; }
+.deal .label { color: var(--magenta); }
+
+/* Tech */
+.tech { background: var(--bone); }
+.tech-table { margin-top: 28px; width: 100%; border-collapse: collapse; font-size: 0.98rem; }
+.tech-table th, .tech-table td { text-align: left; padding: 12px 14px; border-bottom: 2px solid var(--ink); vertical-align: top; }
+.tech-table th { width: 28%; font: 700 12px/1.4 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; }
+.table-wrap { overflow-x: auto; }
+
+/* Contact */
+.contact { background: var(--yellow); border-top: 3px solid var(--ink); }
+.contact h2 { color: var(--ink); }
+.contact-row { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.contact-card { background: var(--bone); border: 2px solid var(--ink); border-radius: 100px; padding: 12px 20px; font: 500 1rem/1.2 var(--mono); user-select: all; }
+.foot { margin-top: 28px; font-size: 0.9rem; }
+
+@media (max-width: 900px) {
+  .hero-grid, .status-grid { grid-template-columns: 1fr; }
+  .rail { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .features, .deal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  section { padding-block: 48px; }
+  .rail { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .features, .deal-grid { grid-template-columns: 1fr; }
+  .hero .phone { max-width: 240px; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="logo">DaDa</div>
+      <h1>Just the two of us<span>a finished app for couples</span></h1>
+      <p class="lede">A private space for two on iOS and Android: chat, plans, memories and a shared pet. Built, working, and ready to launch under your brand.</p>
+      <div class="hero-meta">
+        <span class="pill"><span class="dot" aria-hidden="true"></span>Beta in TestFlight</span>
+        <span class="pill">iOS + Android</span>
+        <span class="pill">English · Russian</span>
+      </div>
+    </div>
+    <div class="phone"><img src="../img/welcome.jpg" alt="DaDa welcome screen: Just the two of us" width="900" height="1948"></div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true"><p>For two ✺ Just us ✺ No group chats ✺ Your plans ✺ Your memories ✺ Your little pet ✺ For two ✺ Just us ✺ No group chats ✺ Your plans ✺ Your memories ✺ Your little pet ✺&nbsp;</p></div>
+
+<section class="screens">
+  <div class="wrap">
+    <h2>Inside the app</h2>
+    <p class="intro">Real screens from the current beta, recorded on a demo couple. Every screen is live: data syncs between both partners in real time.</p>
+    <div class="rail">
+      <figure class="shot" style="margin:0"><div class="phone"><img src="../img/home.jpg" alt="Home screen with days together and the next special day" loading="lazy" width="900" height="1948"></div><h3>Us</h3><p>Days together, the next special day, the partner's wishes at a glance.</p></figure>
+      <figure class="shot" style="margin:0"><div class="phone"><img src="../img/chat.jpg" alt="Private chat between two partners with reactions" loading="lazy" width="900" height="1948"></div><h3>Chat</h3><p>Private chat for two with replies, reactions, voice and video notes.</p></figure>
+      <figure class="shot" style="margin:0"><div class="phone"><img src="../img/plans.jpg" alt="Shared calendar with a mountain picnic planned" loading="lazy" width="900" height="1948"></div><h3>Plans</h3><p>One shared calendar with reminders for both partners.</p></figure>
+      <figure class="shot" style="margin:0"><div class="phone"><img src="../img/tasks.jpg" alt="Shared task list assigned to me, partner or both" loading="lazy" width="900" height="1948"></div><h3>Tasks</h3><p>Shared to-dos assigned to me, my partner or both of us.</p></figure>
+      <figure class="shot" style="margin:0"><div class="phone"><img src="../img/pet.jpg" alt="Shared virtual pet named Donut with streaks" loading="lazy" width="900" height="1948"></div><h3>Pet</h3><p>A pet the couple raises together; it grows while they both show up.</p></figure>
+    </div>
+  </div>
+</section>
+
+<section class="built">
+  <div class="wrap">
+    <h2>What is already built</h2>
+    <div class="features">
+      <div class="feature f-chat"><h3>Chat for two</h3><ul><li>Text, photos, video, voice, video notes</li><li>Stickers and hand-drawn doodles</li><li>Replies, reactions, read receipts, typing</li><li>Offline queue, report and block</li></ul></div>
+      <div class="feature f-plans"><h3>Plans</h3><ul><li>Shared calendar with reminders</li><li>Tasks and shared lists</li><li>Date ideas and wishlists</li><li>Anniversaries and special days</li></ul></div>
+      <div class="feature f-pet"><h3>Together</h3><ul><li>Shared pet with streaks and revival</li><li>Mood check-ins and nudges</li><li>Couple invite by code</li><li>Location sharing on consent</li></ul></div>
+      <div class="feature f-mem"><h3>Memories</h3><ul><li>Shared photo and video gallery</li><li>Albums with covers</li><li>Memories and weekly recaps</li></ul></div>
+      <div class="feature f-cycle"><h3>Cycle tracker</h3><ul><li>Own consent and privacy controls</li><li>Partner sees only what is shared</li><li>Forecast and fertile window</li></ul></div>
+      <div class="feature f-plat"><h3>Platform</h3><ul><li>Push notifications</li><li>Account deletion and data export (GDPR)</li><li>Over-the-air updates without store review</li><li>Couple subscription model in place</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="status">
+  <div class="wrap">
+    <h2>Store-ready, not yet listed</h2>
+    <div class="status-grid">
+      <div>
+        <p>DaDa is in a closed beta through Apple TestFlight. It has <strong>not been published</strong> on the App Store or Google Play yet.</p>
+        <p>For a buyer this is an advantage: the app can go live in both stores <strong>under your company's developer account</strong>, with your name, brand and pricing from the first day. There is no existing listing, reviews or audience to migrate.</p>
+        <p>If you prefer, we can publish it first and transfer the listing to your account later. Apple and Google both support moving an app between developer accounts.</p>
+      </div>
+      <ol class="steps">
+        <li><span><b>Demo and NDA</b>A 20-minute walkthrough and TestFlight access for your team.</span></li>
+        <li><span><b>Agreement</b>Acquisition, licence or white label, whichever fits.</span></li>
+        <li><span><b>Your brand</b>Name, characters and colours adapted to your identity.</span></li>
+        <li><span><b>Launch</b>Published on the App Store and Google Play under your account.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="deals">
+  <div class="wrap">
+    <h2>Ways to work together</h2>
+    <div class="deal-grid">
+      <div class="deal"><span class="label">Option A</span><h3>Acquisition</h3><p>Full rights to the code, backend and design. Handover, launch support and an optional maintenance contract.</p></div>
+      <div class="deal"><span class="label">Option B</span><h3>Licence</h3><p>We run the app under your brand and pay royalties on subscriptions. No development cost on your side.</p></div>
+      <div class="deal"><span class="label">Option C</span><h3>White label</h3><p>We adapt DaDa and deliver it on your store accounts, then support it for a monthly fee.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="tech">
+  <div class="wrap">
+    <h2 style="color:var(--violet-deep)">Under the hood</h2>
+    <div class="table-wrap">
+      <table class="tech-table">
+        <tr><th>Mobile</th><td>React Native with Expo SDK 57, one codebase for iOS and Android, new architecture</td></tr>
+        <tr><th>Backend</th><td>NestJS modular monolith, PostgreSQL, Redis, background workers, Kubernetes deployment</td></tr>
+        <tr><th>Realtime</th><td>Socket connection for messages, typing, reactions and read state</td></tr>
+        <tr><th>Quality</th><td>200+ backend end-to-end tests, typed API from OpenAPI</td></tr>
+        <tr><th>Languages</th><td>English and Russian; more locales plug into the same dictionaries</td></tr>
+        <tr><th>Privacy</th><td>Account deletion, personal data export, separate consent for the cycle tracker</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <h2>Let's talk</h2>
+    <p style="margin-top:14px;max-width:56ch">Reply to our email and we will send TestFlight access and walk you through the app. Happy to sign an NDA first.</p>
+    <p class="foot">Screens show a demo couple with sample data.</p>
+  </div>
+</section>
+</body>
+</html>
